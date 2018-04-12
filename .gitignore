@@ -3,6 +3,9 @@
 ################################################################################
 
 /AuburnRandall/.vs
-/AuburnRandall/AuburnRandall.Core/bin/Debug/netstandard2.0
+/AuburnRandall/AuburnRandall.Core/bin/
 /AuburnRandall/AuburnRandall.Core/obj
 /AuburnRandall/packages
+/AuburnRandall/AuburnRandall.Web/bin
+/AuburnRandall/AuburnRandall.Web/node_modules
+/AuburnRandall/AuburnRandall.Web/obj

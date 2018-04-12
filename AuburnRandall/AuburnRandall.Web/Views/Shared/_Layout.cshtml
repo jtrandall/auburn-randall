@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Jeremy Randall</title>
+
+    @Styles.Render("~/bundles/AngularStyles")
+    @Styles.Render("~/bundles/MainApplicationStyles")
+
+</head>
+<body ng-app="mainApp" ng-cloak>
+    <md-content>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <md-truncate>Jeremy Randall</md-truncate>
+                @*<h2 flex md-truncate>Toobar</h2>*@
+            </div>
+        </md-toolbar>
+    </md-content>
+
+    @RenderBody()
+
+
+    @RenderSection("scripts", required: false)
+
+    @Scripts.Render("~/bundles/AngularJs")
+    @Scripts.Render("~/bundles/MainApplicationJs")
+</body>
+</html>
