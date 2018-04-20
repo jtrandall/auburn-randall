@@ -1,21 +1,21 @@
 ﻿<div ng-controller="MainCtrl as ctrl">
     <md-content class="md-padding" layout-xs="column" layout="row">
-        <div layout-xs="column" layout="row" flex layout-align="center center" ng-repeat="page in ctrl.pages">
+        <div layout-xs="column" layout="row" flex layout-align="center center" ng-repeat="category in ctrl.categories">
             <md-card>
                 <md-card-header>
                     <md-card-avatar>
-                        <md-icon class="material-icons">{{page.icon}}</md-icon>
+                        <md-icon class="material-icons">{{category.icon}}</md-icon>
                     </md-card-avatar>
                     <md-card-header-text>
-                        <span class="md-title">{{page.title}}</span>
-                        <span class="md-subhead">{{page.subheader}}</span>
+                        <span class="md-title">{{category.title}}</span>
+                        <span class="md-subhead">{{category.subheader}}</span>
                     </md-card-header-text>
                 </md-card-header>
                 <md-card-content>
-                    <p>{{page.summary}}</p>
+                    <p>{{category.summary}}</p>
                 </md-card-content>
                 <md-card-actions layout="row" layout-align="end center">
-                    <md-button ng-click="ctrl.navigate(page)">Open</md-button>
+                    <md-button ng-click="ctrl.navigate(category)">Open</md-button>
                 </md-card-actions>
             </md-card>
         </div>

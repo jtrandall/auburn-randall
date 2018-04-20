@@ -85,17 +85,18 @@
     <Content Include="Global.asax" />
     <Content Include="index.html" />
     <Content Include="src\mainApp\controllers\MainCtrl.js" />
-    <Content Include="src\mainApp\controllers\PageCtrl.js" />
+    <Content Include="src\mainApp\controllers\CategoryCtrl.js" />
     <Content Include="src\mainApp\mainApp.js" />
     <Content Include="src\mainApp\services\NavigationStateService.js" />
-    <Content Include="src\mainApp\services\PageService.js" />
+    <Content Include="src\mainApp\services\CategoryService.js" />
     <Content Include="pages\home.html" />
-    <Content Include="pages\page.html" />
+    <Content Include="pages\category.html" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="api\CategoryController.cs" />
     <Compile Include="api\PageController.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Global.asax.cs">

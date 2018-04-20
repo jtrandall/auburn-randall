@@ -1,19 +1,19 @@
-﻿angular.module('mainApp').controller('MainCtrl', ['$location', 'PageService', 'NavigationStateService', function ($location, PageService, NavigationStateService) {
+﻿angular.module('mainApp').controller('MainCtrl', ['$location', 'CategoryService', 'NavigationStateService', function ($location, CategoryService, NavigationStateService) {
     var self = this;
 
-    self.pages = {};
+    self.categories = {};
 
     initialize();
 
-    self.navigate = function (selectedPage) {
-        NavigationStateService.pageId = selectedPage.id;
+    self.navigate = function (selected) {
+        NavigationStateService.referenceId = selected.id;
 
-        $location.path('/page');
+        $location.path('/category');
     }
 
     function initialize() {
-        PageService.getPages().then(function (pages) {
-            self.pages = pages;
+        CategoryService.getCategories().then(function (categories) {
+            self.categories = categories;
         });
     }
 }]);

@@ -7,9 +7,9 @@
                 controllerAs: 'ctrl'
             })
 
-            .when('/page', {
-                templateUrl: 'pages/page.html',
-                controller: 'PageCtrl',
+            .when('/category', {
+                templateUrl: 'pages/category.html',
+                controller: 'CategoryCtrl',
                 controllerAs: 'ctrl'
             })
             .otherwise({
