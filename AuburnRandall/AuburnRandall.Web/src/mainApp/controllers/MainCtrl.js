@@ -1,4 +1,4 @@
-﻿angular.module('mainApp').controller('MainCtrl', ['$window', 'PageService', function ($window, PageService) {
+﻿angular.module('mainApp').controller('MainCtrl', ['$location', 'PageService', 'NavigationStateService', function ($location, PageService, NavigationStateService) {
     var self = this;
 
     self.pages = {};
@@ -6,7 +6,9 @@
     initialize();
 
     self.navigate = function (selectedPage) {
-        $window.open(selectedPage.url, '_self');
+        NavigationStateService.pageId = selectedPage.id;
+
+        $location.path('/page');
     }
 
     function initialize() {

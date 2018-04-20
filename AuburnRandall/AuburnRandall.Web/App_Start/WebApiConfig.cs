@@ -1,7 +1,4 @@
 ﻿using Newtonsoft.Json.Serialization;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web.Http;
 
 namespace AuburnRandall.Web
@@ -10,14 +7,8 @@ namespace AuburnRandall.Web
     {
         public static void Register(HttpConfiguration config)
         {
-            // json as default
-            config.Formatters.Remove(config.Formatters.XmlFormatter);
-
-            var json = GlobalConfiguration.Configuration.Formatters.JsonFormatter;
-            json.SerializerSettings.Formatting = Newtonsoft.Json.Formatting.Indented;
-            json.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
-
             // Web API configuration and services
+            config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
 
             // Web API routes
             config.MapHttpAttributeRoutes();
